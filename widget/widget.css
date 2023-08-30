@@ -1,6 +1,6 @@
 @font-face {
-    font-family: myFirstFont;
-    src: url(sansation_light.woff);
+    font-family: DOOM;
+    src: url(https://swolekat.github.io/se-doom-chat/assets/fonts/DooM%20Regular.ttf);
 }
 
 *, *::before, *::after {
@@ -8,7 +8,7 @@
 }
 
 * {
-    font-family: "DooM Regular", Arial, sans-serif;
+    font-family: DOOM, Arial, sans-serif;
     font-size: 30px;
     overflow-wrap: break-word;
     margin: 0;
@@ -39,22 +39,11 @@ main {
     margin-top: 15px;
     visibility: hidden;
     position: relative;
-    border-radius: 7px;
     min-width: 300px;
     max-width: 500px;
     width: var(--dynamicWidth);
-    display: flex;
 
-    border: solid 1px #424542;
-    box-shadow: 1px 1px #e7dfe7,
-        -1px -1px #e7dfe7,
-        1px -1px #e7dfe7,
-        -1px 1px #e7dfe7,
-        0 -2px #9c9a9c,
-        -2px 0 #7b757b,
-        0 2px #424542;
-
-    background: linear-gradient(to bottom,  #04009d 0%,#06004d 100%);
+    background: url(https://swolekat.github.io/se-doom-chat/assets/background.png);
 
     color: #eff1ff;
     text-shadow: 2px 2px #212421,
@@ -78,20 +67,6 @@ animation: fade reverse .5s,
     animation: fade reverse .5s, up .5s;
 }
 
-.profile-section {
-    width: 100px;
-    padding: 10px;
-}
-
-.profile-picture {
-    width: 80px;
-    height: 80px;
-}
-
-.content-section {
-
-}
-
 .username-section {
     position: relative;
     z-index: 2;
@@ -101,19 +76,22 @@ animation: fade reverse .5s,
     font-weight: bold;
     line-height: 40px;
     display: inline-block;
+    color: #ff0000;
 }
 
 .badge {
     height: 20px;
     width: 20px;
+    image-rendering: pixelated;
 }
 
 .message-section {
-    padding: 10px;
+    padding: 0 10px 10px;
 }
 
 .message-wrapper {
     display: inline-block;
+    color: #adadad;
 }
 
 .large-emotes .message-section {

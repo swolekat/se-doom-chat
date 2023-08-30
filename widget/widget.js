@@ -121,19 +121,14 @@ const createMessageHtml = ({
     // don't mess with data-message-id, data-user-id or the chat-message class name
     return `
         <div data-message-id="${msgId}" data-user-id="${userId}" class="chat-message ${emoteSize} ${eventClasses} ${textClass}" >
-            <div class="profile-section">
-                <img class="profile-picture" src="https://swolekat.github.io/final-fantasy-se-chat/assets/portraits/${portaitNumber}.webp"/>
+            <div class="username-section">
+                ${badgeHtml}
+                ${displayName}
             </div>
-            <div class="content-section">
-                <div class="username-section">
-                    ${badgeHtml}
-                    ${displayName}
-                </div>
-                <div class="message-section">
-                    <span class="message-wrapper">
-                        ${convertMessageContentsArrayToHtml(messageContentsArray, emoteSize)}
-                    </span>
-                </div>
+            <div class="message-section">
+                <span class="message-wrapper">
+                    ${convertMessageContentsArrayToHtml(messageContentsArray, emoteSize)}
+                </span>
             </div>
         </div>
     `;
