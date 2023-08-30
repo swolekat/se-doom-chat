@@ -1,0 +1,93 @@
+{
+  "largeEmotes": {
+    "label": "Larger emotes for emote messages?",
+    "group": "Presentation Options",
+    "type": "dropdown",
+    "value": "true",
+    "options": {
+      "true": "Yes",
+      "false": "No"
+    }
+  },
+  "raidMessages": {
+    "label": "Show Messages for Raids?",
+    "group": "Presentation Options",
+    "type": "dropdown",
+    "value": "true",
+    "options": {
+      "true": "Yes",
+      "false": "No"
+    }
+  },
+  "subMessages": {
+    "label": "Show Messages for Subs?",
+    "group": "Presentation Options",
+    "type": "dropdown",
+    "value": "true",
+    "options": {
+      "true": "Yes",
+      "false": "No"
+    }
+  },
+  "followMessages": {
+    "label": "Show Messages for Follows?",
+    "group": "Presentation Options",
+    "type": "dropdown",
+    "value": "true",
+    "options": {
+      "true": "Yes",
+      "false": "No"
+    }
+  },
+  "ignoreUserListLabel": {
+    "label": "Ignore these users:",
+    "group": "Bot Filters",
+    "type": "hidden"
+  },
+  "ignoreUserList": {
+    "label": "(Comma Separated)",
+    "group": "Bot Filters",
+    "type": "text",
+    "value": "StreamElements, Streamlabs, Nightbot"
+  },
+  "ignorePrefixListLabel": {
+    "label": "Ignore messages that start with:",
+    "group": "Bot Filters",
+    "type": "hidden"
+  },
+  "ignorePrefixList": {
+    "label": "(Comma Separated)",
+    "group": "Bot Filters",
+    "type": "text",
+    "value": "!"
+  },
+  "lifetimeLabel": {
+    "label": "Hide messages after this many seconds",
+    "group": "Timing",
+    "type": "hidden"
+  },
+  "lifetime": {
+    "label": "(Set to 0 to never hide)",
+    "group": "Timing",
+    "type": "number",
+    "value": 10,
+    "step": 1,
+    "min": 0
+  },
+  "widgetName": {
+    "type": "hidden",
+    "value": "Final Fantasy Chat by Swolekat"
+  },
+  "widgetAuthor": {
+    "type": "hidden",
+    "value": "swolekat"
+  },
+  "widgetVersion": {
+    "type": "hidden",
+    "value": "0.0.1"
+  },
+  "widgetUpdateUrl": {
+    "type": "hidden",
+    "value": "https://github.com/swolekat/final-fantasy-se-chat"
+  }
+}

@@ -1,0 +1,172 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    font-family: "DooM Regular", Arial, sans-serif;
+    font-size: 30px;
+    overflow-wrap: break-word;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    align-content: start;
+    overflow: visible;
+    padding: 30px;
+    flex-direction: column-reverse;
+    height: 100%;
+}
+
+@keyframes fade {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes up {
+    from { transform: translateY(50px); }
+    to { transform: translateY(0px); }
+}
+
+
+.chat-message {
+    margin-top: 15px;
+    visibility: hidden;
+    position: relative;
+    border-radius: 7px;
+    min-width: 300px;
+    max-width: 500px;
+    width: var(--dynamicWidth);
+    display: flex;
+
+    border: solid 1px #424542;
+    box-shadow: 1px 1px #e7dfe7,
+        -1px -1px #e7dfe7,
+        1px -1px #e7dfe7,
+        -1px 1px #e7dfe7,
+        0 -2px #9c9a9c,
+        -2px 0 #7b757b,
+        0 2px #424542;
+
+    background: linear-gradient(to bottom,  #04009d 0%,#06004d 100%);
+
+    color: #eff1ff;
+    text-shadow: 2px 2px #212421,
+    1px 1px #212021;
+}
+
+.chat-message.animate {
+    visibility: visible;
+animation: fade reverse .5s,
+                          fade .5s calc({lifetime}s - .5s) forwards,
+                                                           up .5s,
+                                                                up reverse .5s calc({lifetime}s - .5s) forwards;
+}
+
+.chat-message.animate .username-section {
+    width: 100%;
+}
+
+.chat-message.animate.forever {
+    visibility: visible;
+    animation: fade reverse .5s, up .5s;
+}
+
+.profile-section {
+    width: 100px;
+    padding: 10px;
+}
+
+.profile-picture {
+    width: 80px;
+    height: 80px;
+}
+
+.content-section {
+
+}
+
+.username-section {
+    position: relative;
+    z-index: 2;
+    height: 40px;
+    padding: 0 10px;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 40px;
+    display: inline-block;
+}
+
+.badge {
+    height: 20px;
+    width: 20px;
+}
+
+.message-section {
+    padding: 10px;
+}
+
+.message-wrapper {
+    display: inline-block;
+}
+
+.large-emotes .message-section {
+    text-align: center;
+}
+
+.large-emotes .emote {
+    height: 112px;
+}
+
+.medium-emotes .emote {
+    height: 3.5rem;
+    max-height: 112px;
+}
+
+.small-emotes .emote {
+    height: 1.75rem;
+    max-height: 112px;
+}
+
+.complex-emote {
+    display: inline-block;
+    position: relative;
+}
+
+.emote.zero-width {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent !important;
+}
+
+.raid-message {
+    background: #888888;
+    font-size: 72px;
+    padding: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sub-message {
+    background: #888888;
+    font-size: 72px;
+    padding: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.follower-message {
+    background: #888888;
+    font-size: 72px;
+    padding: 20px;
+    font-weight: bold;
+    text-align: center;
+}
