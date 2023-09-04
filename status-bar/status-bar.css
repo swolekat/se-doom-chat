@@ -29,6 +29,14 @@ main {
     width: 100%;
 }
 
+.doom-face {
+    display: block;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .counter {
     position: absolute;
     text-align: right;
