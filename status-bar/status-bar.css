@@ -1,0 +1,25 @@
+@font-face {
+    font-family: DOOM;
+    src: url(https://swolekat.github.io/se-doom-chat/assets/fonts/DooM%20Regular.ttf);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    font-family: DOOM, Arial, sans-serif;
+    overflow-wrap: break-word;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    align-content: start;
+    overflow: visible;
+    padding: 30px;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
