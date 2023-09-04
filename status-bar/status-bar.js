@@ -24,12 +24,15 @@ const checkPrivileges = (data, privileges) => {
 /* Widget Initalization */
 window.addEventListener('onWidgetLoad', async obj => {
     const sessionData = obj.detail.session.data;
-    debugger;
+    followers = sessionData['follower-total'].count;
+    subs = sessionData['subscriber-total'].count
+    followerCounter.innerHTML = followers;
+    subCounter.innerHTML = subs;
 })
 
 const onMessage = (event) => {
-    const data = obj.detail.event.data;
-    const {text} = data;
+    const data = event.data;
+    const text = data.text;
 
     if (!checkPrivileges(data, 'broadcaster')) {
         return;
@@ -45,29 +48,15 @@ const onMessage = (event) => {
     console.innerHTML = consoleName;
 };
 
-const onFollower = (event) => {
-    const name = event?.name;
-    data.latestFollower = name;
-    if(!data.followMessages){
-        return;
-    }
-    const msgId = `follower-${name}`;
-    const html = createFollowerMessageHtml({displayName: name, msgId });
-    showMessage(msgId, html);
+const onFollower = () => {
+    followers += 1;
+    followerCounter.innerHTML = followers;
 };
 
 const onSubscriber = (event) => {
-    const name = event?.name;
-    data.latestSubscriber = name;
-    if(!data.subMessages){
-        return;
-    }
-    const msgId = `subscriber-${name}`;
-    const html = createSubMessageHtml({displayName: name, msgId });
-    showMessage(msgId, html);
+    subs += event.amount;
+    subCounter.innerHTML = subs;
 };
-
-
 
 /* Use Events */
 const eventListenerToHandlerMap = {

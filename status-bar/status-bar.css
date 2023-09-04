@@ -16,10 +16,40 @@
 
 main {
     display: flex;
-    align-content: start;
     overflow: visible;
-    padding: 30px;
+    padding: 0;
     flex-direction: column;
     height: 100%;
     position: relative;
+    justify-content: end;
+    width: 100%;
+}
+
+.status-bar {
+    width: 100%;
+}
+
+.counter {
+    position: absolute;
+    text-align: right;
+    color: rgba(255, 0, 0, 0.75);
+    font-size: 120px;
+    -webkit-text-stroke: 8px rgba(150, 0, 0, 0.75);
+    paint-order: stroke fill;
+}
+
+.follower-counter {
+    bottom: 120px;
+    right: 1766px;
+}
+
+.sub-counter {
+    bottom: 120px;
+    right: 2226px;
+}
+
+.console {
+    bottom: 140px;
+    right: 700px;
+    font-size: 90px;
 }
